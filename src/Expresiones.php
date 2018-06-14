@@ -10,6 +10,7 @@
       foreach($cars as $c){
         if($c==="(") $cont++;
         if($c===")") $cont--;
+        if ($cont<0) return FALSE; // Línea que corrige el problema.
       }
       return ($cont===0);
     }
